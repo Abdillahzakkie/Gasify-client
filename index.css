@@ -1,0 +1,330 @@
+html,
+body {
+  min-height: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #cceaec;
+  color: #fff;
+  padding: 0 100px;
+  font-family: "Poppins";
+  margin: 0;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+p {
+  margin: 0;
+}
+
+.d-none {
+  display: none !important;
+}
+
+/* Header css */
+
+header .main-nav {
+  padding: 15px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+header .logo img {
+  width: 50px;
+  margin-right: 5px;
+}
+header .logo .heading {
+  font-size: 20px;
+  color: #000;
+}
+header .connect-wallet {
+  background: #fff;
+  border-radius: 10px;
+  padding: 10px 20px;
+  box-shadow: 2px 2px 5px 0px #000;
+}
+header .connect-wallet a {
+  color: #000;
+}
+
+/* Referal */
+
+.referal {
+  position: relative;
+  background: url("assets/images/main-image.png");
+  margin: 0 -100px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 30px 100px 200px;
+}
+.referal .refer-friends {
+  color: #2b813d;
+  font-size: 25px;
+  display: table;
+}
+.referal .users-cashback {
+  display: table;
+  color: #000;
+  opacity: 0.8;
+  width: 18%;
+}
+.referal .referral-link {
+  background: #4e7c7b;
+  display: table;
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin-top: 50px;
+  text-align: center;
+}
+.referal .referral-link form .your-link {
+  text-align: left;
+}
+.referal .referral-link form input {
+  width: 100%;
+  border-radius: 5px;
+  border: none;
+  height: 35px;
+  margin-top: 10px;
+  outline: none;
+  padding: 10px;
+  box-sizing: border-box;
+}
+.referal .referral-link form .generate {
+  margin-top: 10px;
+  background: #cceaed;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 25px;
+  font-size: 16px;
+  outline: none;
+  cursor: pointer;
+}
+
+.referals-position {
+  position: absolute;
+  bottom: -135px;
+  left: 0;
+  right: 0;
+}
+
+.referals {
+  display: flex;
+  justify-content: space-around;
+}
+.referals .total-referals {
+  background: #cceaed;
+  color: #000;
+  padding: 25px 30px;
+  border-radius: 5px;
+  text-align: center;
+  box-shadow: 0px 3px 8px grey;
+  min-width: 200px;
+}
+.referals .total-referals .heading {
+  font-size: 23px;
+}
+.referals .total-referals .referal-line {
+  height: 4px;
+  border: none;
+  background: linear-gradient(
+    to right,
+    #1c8e88,
+    #329b96,
+    #44a7a4,
+    #55b4b3,
+    #65c1c1
+  );
+  margin: 0;
+}
+.referals .total-referals .value {
+  font-size: 23px;
+  font-weight: 600;
+  padding-top: 15px;
+}
+
+/* Points css */
+.points {
+  background: #fff;
+  margin: 0 -100px;
+  padding: 170px 0 40px;
+}
+.points .how-works {
+  color: #000;
+  text-align: center;
+  font-size: 25px;
+}
+.points .line {
+  margin: 0 auto;
+  width: 12%;
+  background: linear-gradient(
+    to right,
+    #4e7c7b,
+    #569695,
+    #5eb1b1,
+    #64cdcd,
+    #6ae9eb
+  );
+  height: 8px;
+  border: none;
+  border-radius: 1px;
+}
+.points .steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 100px;
+  padding: 30px 100px 0;
+}
+.points .steps .sub-steps {
+  color: #000;
+  position: relative;
+}
+.points .steps .sub-steps img {
+  width: 100%;
+}
+.points .steps .sub-steps .step-texts {
+  position: absolute;
+  top: 0;
+  margin: 0 auto;
+  left: 0;
+  bottom: 0;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.points .steps .sub-steps .step-texts .step-heading {
+  top: 35px;
+  position: absolute;
+  font-size: 25px;
+  font-weight: 600;
+}
+.points .steps .sub-steps .step-texts .step-value {
+  width: 50%;
+}
+
+/* table css */
+
+.wallet-transactions {
+  padding: 30px 0;
+}
+.wallet-transactions .heading {
+  text-align: center;
+  font-size: 25px;
+  color: #000;
+  padding-bottom: 20px;
+}
+.wallet-transactions .table-wrapper {
+  overflow-x: auto;
+  max-height: 480px;
+}
+.wallet-transactions .table-wrapper .transaction-table {
+  width: 100%;
+  text-align: center;
+  border-spacing: 0;
+  border-radius: 10px;
+}
+.wallet-transactions .table-wrapper .transaction-table thead {
+  font-size: 20px;
+  background: #959595;
+}
+.wallet-transactions .table-wrapper .transaction-table thead th {
+  padding: 5px;
+  font-size: 20px;
+  background: #959595;
+  position: sticky;
+  z-index: 5;
+  top: 0;
+}
+.wallet-transactions .table-wrapper .transaction-table tbody {
+  font-size: 18px;
+}
+.wallet-transactions .table-wrapper .transaction-table tbody tr:nth-child(odd) {
+  background: #5b5b5b;
+}
+.wallet-transactions
+  .table-wrapper
+  .transaction-table
+  tbody
+  tr:nth-child(even) {
+  background: #959595;
+}
+.wallet-transactions .table-wrapper .transaction-table tbody td {
+  padding: 10px;
+  font-size: 18px;
+}
+
+@media (max-width: 1200px) {
+  .referal .users-cashback {
+    width: 30%;
+  }
+  .points .line {
+    width: 16%;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    padding: 0 15px;
+  }
+  .referal {
+    padding: 30px 30px 130px;
+    margin: 0 -15px;
+  }
+  .referal .users-cashback {
+    width: auto;
+  }
+  .points {
+    margin: 0 -15px;
+  }
+  .points .line {
+    width: 20%;
+  }
+  .referals .total-referals {
+    min-width: auto;
+  }
+}
+
+@media (max-width: 479px) {
+  header .connect-wallet {
+    padding: 5px;
+  }
+  .referals-position {
+    bottom: -110px;
+  }
+  .referals .total-referals {
+    padding: 15px 20px;
+  }
+  .referal .total-referals .heading {
+    font-size: 14px;
+  }
+  .referal .total-referals .value {
+    font-size: 16px;
+  }
+  .points .line {
+    width: 40%;
+  }
+  .points .steps {
+    gap: 40px;
+    padding: 30px 30px 0;
+  }
+  .points .steps .sub-steps .step-texts .step-heading {
+    font-size: 20px;
+  }
+  .wallet-transactions .table-wrapper .transaction-table thead th {
+    font-size: 18px;
+  }
+  .wallet-transactions .table-wrapper .transaction-table tbody td {
+    font-size: 15px;
+  }
+}

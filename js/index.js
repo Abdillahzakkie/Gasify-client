@@ -84,7 +84,7 @@ generateReferralForm.addEventListener('submit', async e => {
       <input type="text" value=${_referralLink} />
       <button type="submit" class="generate">PROCEED</button>
     `;
-    window.location = _referralLink;
+    // window.location = _referralLink;
   } catch (error) {
     console.log(error.message);
     return error.message;

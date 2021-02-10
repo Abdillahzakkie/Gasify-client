@@ -77,13 +77,14 @@ generateReferralForm.addEventListener('submit', async e => {
 
     const _url = `https://gasify-nodejs-backend.herokuapp.com/api/v1/referrer/addReferrer`;
     let result = await postData(_url, { user });
-  
+    console.log(result);
     const _referralLink = `https://gasify.io/presale?referralID=${result.referralID}`
     generateReferralForm.innerHTML = `
       <p class="your-link">Your Referral Link</p>
       <input type="text" value=${_referralLink} />
-      <button type="submit" class="generate">GENERATE</button>
+      <button type="submit" class="generate">PROCEED</button>
     `;
+    window.location = _referralLink;
   } catch (error) {
     console.log(error.message);
     return error.message;

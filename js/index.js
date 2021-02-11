@@ -42,7 +42,7 @@ const settings = async () => {
   const _id = getUserDetails[0].referralID;
   generateReferralForm.innerHTML = `
       <p class="your-link">Your Referral Link</p>
-      <input type="text" value=https://gasify-presale.netlify.app/?referralID=${_id} />
+      <input type="text" value=https://gasify-dashboard.netlify.app/?referralID=${_id} />
       <button type="submit" class="generate">PROCEED</button>
     `;
 }
@@ -72,13 +72,13 @@ generateReferralForm.addEventListener('submit', async e => {
   e.preventDefault();
   try {
     if(getUserDetails.length > 0) {
-      return window.location = `https://gasify-presale.netlify.app/?referralID=${getUserDetails[0].referralID}`;
+      return window.location = `https://gasify-dashboard.netlify.app/?referralID=${getUserDetails[0].referralID}`;
     }
 
     const _url = `https://gasify-nodejs-backend.herokuapp.com/api/v1/referrer/addReferrer`;
     let result = await postData(_url, { user });
     console.log(result);
-    const _referralLink = `https://gasify-presale.netlify.app/?referralID=${result.referralID}`
+    const _referralLink = `https://gasify-dashboard.netlify.app/?referralID=${result.referralID}`
     generateReferralForm.innerHTML = `
       <p class="your-link">Your Referral Link</p>
       <input type="text" value=${_referralLink} />
